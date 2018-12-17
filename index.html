@@ -13,27 +13,26 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="apple-touch-icon" href="img/f7-icon-square.png">
     <link rel="icon" href="img/f7-icon.png">
-
-    <script>
-            var x=document.getElementById("demo");
-            function getLocation()
-             {
-            if (navigator.geolocation)
-            {
-            navigator.geolocation.getCurrentPosition(showPosition);
-            }
-            else{x.innerHTML="Geolocation is not supported by this browser.";}
-            }
-            function showPosition(position)
-            {
-            x.innerHTML="Latitude: " + position.coords.latitude + 
-            "<br>Longitude: " + position.coords.longitude;  
-            }
-            getLocation()
-            </script>
 </head>
 
 <body>
+        <script>
+                var x=document.getElementById("demo");
+                function getLocation()
+                 {
+                if (navigator.geolocation)
+                {
+                navigator.geolocation.getCurrentPosition(showPosition);
+                }
+                else{x.innerHTML="Geolocation is not supported by this browser.";}
+                }
+                function showPosition(position)
+                {
+                x.innerHTML="Latitude: " + position.coords.latitude + 
+                "<br>Longitude: " + position.coords.longitude;  
+                }
+                getLocation()
+                </script>
     <div id="app">
         <div class="statusbar"></div>
         <div class="panel panel-left panel-cover">
