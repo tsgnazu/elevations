@@ -15,19 +15,21 @@
     <link rel="icon" href="img/f7-icon.png">
 
     <script>
-            var x = document.getElementById("demo");
-            function getLocation() {
-              if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-              } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-              }
+            var x=document.getElementById("demo");
+            function getLocation()
+             {
+            if (navigator.geolocation)
+            {
+            navigator.geolocation.getCurrentPosition(showPosition);
             }
-            
-            function showPosition(position) {
-              x.innerHTML = "Latitude: " + position.coords.latitude + 
-              "<br>Longitude: " + position.coords.longitude; 
+            else{x.innerHTML="Geolocation is not supported by this browser.";}
             }
+            function showPosition(position)
+            {
+            x.innerHTML="Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;  
+            }
+            getLocation()
             </script>
 </head>
 
